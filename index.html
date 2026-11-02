@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a1220">
+  <meta name="description" content="Кузница теней — личная рабочая студия Виталия и команды помощников">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Кузница теней</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Кузница теней — главная">
+        <span class="brand-mark">К</span><span><b>КУЗНИЦА</b><small>ТЕНЕЙ</small></span>
+      </a>
+      <div class="workspace-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav class="nav-list" aria-label="Основная навигация">
+        <button class="nav-item active" data-view="home"><span>⌂</span>Обзор</button>
+        <button class="nav-item" data-view="chats"><span>◉</span>Чаты</button>
+        <button class="nav-item" data-view="projects"><span>▣</span>Проекты</button>
+        <button class="nav-item" data-view="tasks"><span>✓</span>Задачи</button>
+        <button class="nav-item" data-view="discussions"><span>◇</span>Дискуссии</button>
+        <button class="nav-item" data-view="notes"><span>▤</span>Блокнот</button>
+        <button class="nav-item" data-view="media"><span>▧</span>Медиатека</button>
+        <button class="nav-item" data-view="team"><span>♧</span>Команда</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="local-state"><i></i><span><b>Локальный режим</b><small>Данные на этом устройстве</small></span></div>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Настройки</button>
+        <div class="owner-mini"><span class="avatar owner">В</span><span><b>Виталий</b><small>Владелец студии</small></span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-brand" data-view="home"><span class="brand-mark">К</span><b>КУЗНИЦА ТЕНЕЙ</b></button>
+        <div class="breadcrumbs"><span>СТУДИЯ</span><i>/</i><b id="crumb">ОБЗОР</b></div>
+        <div class="top-actions"><span class="connection"><i></i><span>Локально</span></span><button class="icon-btn" id="backupTop" title="Экспорт резервной копии">⇧</button></div>
+      </header>
+      <div id="view" class="view-content" tabindex="-1"></div>
+      <footer class="footer-note">ТРИ ГОЛОСА. ОДНА ЦЕЛЬ. БЕЗГРАНИЧНЫЕ ИСТОРИИ.</footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Мобильная навигация">
+    <button class="active" data-view="home"><span>⌂</span><small>Обзор</small></button>
+    <button data-view="chats"><span>◉</span><small>Чаты</small></button>
+    <button data-view="projects"><span>▣</span><small>Проекты</small></button>
+    <button data-view="tasks"><span>✓</span><small>Задачи</small></button>
+    <button data-view="more"><span>•••</span><small>Ещё</small></button>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal" class="modal"><div class="modal-card"><button class="modal-close" type="button" aria-label="Закрыть">×</button><div id="modalBody"></div></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

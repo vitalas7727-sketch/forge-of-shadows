@@ -1,0 +1,1 @@
+Иконки приложения: SVG — исходный векторный знак. PNG 192×192 и 512×512 используются PWA manifest. Для пересоздания PNG используйте ImageMagick: `magick -background none icon.svg -resize 192x192 icon-192.png` и аналогично 512.
